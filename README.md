@@ -15,6 +15,18 @@ para fines educativos y de análisis formal.
 
 ## 🚀 **Tecnologías Utilizadas**
 
+```{=html}
+<p align="left">
+```
+`<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="45" title="HTML5"/>`{=html}
+`<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="45" title="CSS3"/>`{=html}
+`<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="45" title="JavaScript"/>`{=html}
+`<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/d3js/d3js-original.svg" width="45" title="D3.js"/>`{=html}
+`<img src="https://sweetalert2.github.io/images/SweetAlert2.png" width="45" title="SweetAlert2"/>`{=html}
+```{=html}
+</p>
+```
+
   -----------------------------------------------------------------------
   Tecnología                                       Uso
   ------------------------------------------------ ----------------------
