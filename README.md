@@ -48,6 +48,7 @@ La organización de directorios sigue una arquitectura modular para facilitar el
 ├── index.html                       # Página de aterrizaje (Landing Page)
 └── README.md                        # Documentación
 ------------------------------------------------------------------------
+text```
 
 ## 🧠 **Características Principales**
 
