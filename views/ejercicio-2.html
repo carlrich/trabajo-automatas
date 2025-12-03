@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 2 - Automatas</title>
+  <script src="https://kit.fontawesome.com/6a4bedafcb.js" crossorigin="anonymous"></script>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="../assets/css/dashboard-automatas.css">
+  <link rel="shortcut icon" href="../assets/img/logo.webp" type="image/x-icon">
+</head>
+<body>
+  <nav>
+    <a href="../" class="atras">
+      <i class="fa-solid fa-angle-left"></i>
+      <span>Inicio</span>
+    </a>
+    <div class="control">
+      <h2>Control AFD</h2>
+      <div class="box-input">
+        <label for="cadena">Ingrese cadena</label>
+        <input type="text" id="cadena">
+      </div>
+      <div class="box-button">
+        <button class="btn btn-submit" id="btn-run"><i class="fa-regular fa-circle-play"></i> Correr</button>
+        <button class="btn btn-clear" id="btn-clear"><i class="fa-solid fa-broom"></i> Limpiar</button>
+      </div>
+    </div>
+    <hr>
+    <div class="control">
+      <h2>Información AFD</h2>
+      <div class="box-input">
+        <label for="estados">Estados:</label>
+        <input type="text" id="estados" disabled readonly value="q0, q1, q2, qØ">
+      </div>
+      <div class="box-input">
+        <label for="estado-inicial">Estado inicial:</label>
+        <input type="text" id="estado-inicial" disabled readonly value="q0">
+      </div>
+      <div class="box-input">
+        <label for="estado-aceptacion">Estado de aceptación:</label>
+        <input type="text" id="estado-aceptacion" disabled readonly value="q0">
+      </div>
+      <div class="box-input">
+        <label for="alfabeto">Alfabeto:</label>
+        <input type="text" id="alfabeto" disabled readonly value="1, 2, 3">
+      </div>
+      <div class="box-input">
+        <label for="expresion-regular">Expresión regular:</label>
+        <input type="text" id="expresion-regular" disabled readonly value="01">
+      </div>
+    </div>
+  </nav>
+  <div class="title">
+    <h1>Múltiplos de 3</h1>
+    <span>Ejemplo: ε, 12, 111, 123</span>
+  </div>
+  <main>
+    <pre class="mermaid">
+      ---
+      config:
+        theme: 'base'
+        themeVariables:
+          primaryColor: '#FFF'
+          primaryTextColor: '#000'
+          primaryBorderColor: '#3b82f6'
+          lineColor: '#3b82f6'
+          secondaryColor: '#006100'
+          tertiaryColor: '#fff'
+      ---
+      stateDiagram-v2
+      direction LR
+        [*] --> q0
+        q0 --> q1 : 1
+        q0 --> q2 : 2
+        q0 --> q0 : 3
+        q0 --> qØ : otros
+        q1 --> q2 : 1
+        q1 --> q0 : 2
+        q1 --> q1 : 3
+        q1 --> qØ : otros
+        q2 --> q0 : 1
+        q2 --> q1 : 2
+        q2 --> q2 : 3
+        q2 --> qØ : otros
+        q0 --> [*]
+    </pre>
+  </main>
+  <footer>
+    <div class="acordion-box">
+      <div class="acordion">
+        <div class="acordion-header">
+          <h2>
+            <button>
+              Recorrido de la cadena 
+              <i class="fa-solid fa-chevron-up"></i>
+            </button>
+          </h2>
+        </div>
+        <div class="collapse">
+          <div class="acordion-body" id="recorrido-cadena">Escriba una cadena</div>
+        </div>
+      </div>
+      <div class="acordion">
+        <div class="acordion-header">
+          <h2>
+            <button>
+              Tabla de transiciones
+              <i class="fa-solid fa-chevron-up"></i>
+            </button>
+          </h2>
+        </div>
+        <div class="collapse">
+          <div class="acordion-body">
+            <table>
+              <thead>
+                <tr>
+                  <th>δ</th>
+                  <th>1</th>
+                  <th>2</th>
+                  <th>3</th>
+                  <th>otros</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>*→ q0</td>
+                  <td>q1</td>
+                  <td>q2</td>
+                  <td>q0</td>
+                  <td>qØ</td>
+                </tr>
+                <tr>
+                  <td>q1</td>
+                  <td>q2</td>
+                  <td>q0</td>
+                  <td>q1</td>
+                  <td>qØ</td>
+                </tr>
+                <tr>
+                  <td>q2</td>
+                  <td>q0</td>
+                  <td>q1</td>
+                  <td>q2</td>
+                  <td>qØ</td>
+                </tr>
+                <tr>
+                  <td>qØ</td>
+                  <td>qØ</td>
+                  <td>qØ</td>
+                  <td>qØ</td>
+                  <td>qØ</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <span>@2025 todos los derechos reservados - Creado por: Carlos Torres Almonacid | Josafat Paredes Ganto</span>
+  </footer>
+
+  <div id="resultado"></div>
+
+  <!-- Librería Mermaid -->
+  <script type="module">
+    import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
+    mermaid.initialize({
+      startOnLoad: true,
+      // theme: "forest"
+    });
+  </script>
+  <script src="../assets/js/dashboard-automatas.js"></script>
+  <script src="../assets/js/ejercicio-2.js"></script>
+</body>
+</html>

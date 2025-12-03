@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyecto Final | Teoría de la Computación</title>
+  <script src="https://kit.fontawesome.com/6a4bedafcb.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/particulas.css">
+  <link rel="shortcut icon" href="./assets/img/logo.webp" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <i class="fa-brands fa-slack"></i>
+      <div class="logo-text">Automatas <span>Final</span></div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#" class="active">Inicio</a></li>
+        <li>
+          <a href="#">
+            Equipo
+            <ul class="sub-menu">
+              <li class="sub-menu-item">Carlos Torres Almonacid</li>
+              <li class="sub-menu-item">Josafat Paredes Ganto</li>
+            </ul>
+          </a>
+        </li>
+        <li><a href="./views/ejercicio-1.html">Ejercicio 1</a></li>
+        <li><a href="./views/ejercicio-2.html">Ejercicio 2</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="banner">
+    <h1>Autómatas Finitos</h1>
+    <p>Desarrollo y visualización de soluciones algorítmicas mediante <span>Autómatas Finitos Deterministas (AFD)</span>. Proyecto final aplicado al curso de <span>Teoría de la Computación</span>.</p>
+    <a href="https://github.com/carlrich/trabajo-automatas.git" target="_blank">
+      <i class="fa-brands fa-github"></i> <span>Ver Código Fuente</span>
+    </a>
+    <div id="particles-js"></div>
+  </div>
+
+  <div class="card-automatas">
+    <div class="cards">
+      <div class="card vacio"></div>
+
+      <div class="card" style="min-height: 280px;">
+        <h2>Validación de Email</h2>
+        <span class="tipo">AFD</span>
+        <p>Diseño de un autómata para la <strong>validación</strong> de correos electrónicos. Con cadenas alfabeto alfanumérico <span>a-z</span>, <span>0-9</span> y caracteres especiales <span>@ . _ -</span>.</p>
+        <p class="ejemplo">Ejemplo: ctorresa@undac.edu.pe</p>
+        <a href="./views/ejercicio-1.html">
+          <i class="fa-solid fa-angle-right"></i>
+        </a>
+      </div>
+
+      <div class="card" style="min-height: 280px;">
+        <h2>Múltiplos de 3</h2>
+        <span class="tipo">AFD</span>
+        <p>Algoritmo de reconocimiento para cadenas numéricas divisibles por 3. Implementación lógica utilizando un alfabeto restringido de dígitos <span>1</span>, <span>2</span> y <span>3</span>.</p>
+        <p class="ejemplo">Ejemplo: ε, 12, 111, 123</p>
+        <a href="./views/ejercicio-2.html" title="Ver Solución">
+          <i class="fa-solid fa-angle-right"></i>
+        </a>
+      </div>
+
+      <div class="card vacio"></div>
+    </div>
+  </div>
+
+  <div class="tecnologia">
+    <ul>
+      <li><i class="fa-brands fa-html5"></i> <span>HTML5 Semántico</span></li>
+      <li><i class="fa-brands fa-css3-alt"></i> <span>CSS3 Moderno</span></li>
+      <li><i class="fa-brands fa-js"></i> <span>JavaScript</span></li>
+      <li><i class="fa-brands fa-github"></i> <span>Git & GitHub</span></li>
+      <li><img src="./assets/img/vs-code.png" alt="VS Code"> <span>VS Code</span></li>
+    </ul>
+  </div>
+
+  <footer>
+    <div class="content">
+      <div class="col">
+        <div class="logo">
+          <i class="fa-brands fa-slack"></i>
+          <div class="logo-text">Automata<span>Final</span></div>
+        </div>
+      </div>
+      <div class="line"></div>
+      <div class="col">
+        <div class="logo">
+          <img src="./assets/img/LogoS.png" alt="Ingenieria de Sistemas y Computación">
+          <div class="logo-text">
+              Ingeniería de Sistemas y <br> Computación - <span>UNDAC</span>
+          </div>
+        </div>
+      </div>
+      <div class="line"></div>
+      <div class="col">
+        <p><strong>Equipo de Desarrollo</strong></p>
+        <ul>
+          <li>Carlos Torres Almonacid</li>
+          <li>Josafat Paredes Ganto</li>
+        </ul>
+        <br> <p><strong>Docente</strong></p>
+        <ul>
+          <li>Ing. Marco Antonio De La Cruz Rocca</li>
+        </ul>
+      </div>
+      <div class="line"></div>
+      <div class="col">
+        <p><strong>Curso:</strong></p>
+        <ul>
+          <li>Teoria de la Computación</li>
+        </ul>
+        <br>
+        <p><strong>Repositorio</strong></p>
+        <div class="social">
+          <a href="https://github.com/carlrich/trabajo-automatas.git"><i class="fa-brands fa-github"></i></a>
+        </div>
+      </div>
+    </div>
+    <p class="copy">&copy; 2025. Todos los derechos reservados - carlrich.github</p>
+  </footer>
+
+  <script src="./assets/js/particles.min.js"></script>
+  <script src="./assets/js/config-particulas.js"></script>
+</body>
+</html>
