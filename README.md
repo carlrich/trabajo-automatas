@@ -1,87 +1,52 @@
-# 📘 Proyecto Final -- Teoría de la Computación
+# 💻 Proyecto Final: Teoría de la Computación
 
-## **Simulador Interactivo de Autómatas Finitos**
+![Estado del Proyecto](https://img.shields.io/badge/Estado-Finalizado-success)
+![Curso](https://img.shields.io/badge/Curso-Teoría_de_la_Computación-blue)
+![Universidad](https://img.shields.io/badge/Universidad-[Nombre_de_tu_U]-orange)
 
-Este proyecto fue desarrollado como trabajo final del curso **Teoría de
-la Computación**, con el objetivo de implementar, visualizar y simular
-autómatas finitos deterministas (AFD) y no deterministas (AFN) de forma
-interactiva mediante una aplicación web.
+> Implementación y visualización de Autómatas Finitos utilizando tecnologías web modernas y librerías de gráficos vectoriales.
 
-La aplicación permite **graficar autómatas**, **procesar cadenas paso a
-paso**, y **mostrar el recorrido completo** de cada transición, ideal
-para fines educativos y de análisis formal.
+---
 
-------------------------------------------------------------------------
+## 📖 Descripción
 
-## 🚀 **Tecnologías Utilizadas**
+Este proyecto fue desarrollado como trabajo final para el curso de **Teoría de la Computación**. El objetivo principal es demostrar el funcionamiento de autómatas (AFD/AFN) mediante una interfaz web interactiva.
 
-```{=html}
-<p align="left">
-```
-`<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="45" title="HTML5"/>`{=html}
-`<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="45" title="CSS3"/>`{=html}
-`<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="45" title="JavaScript"/>`{=html}
-`<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/d3js/d3js-original.svg" width="45" title="D3.js"/>`{=html}
-`<img src="https://sweetalert2.github.io/images/SweetAlert2.png" width="45" title="SweetAlert2"/>`{=html}
-```{=html}
-</p>
-```
+La aplicación permite visualizar grafos de estados de forma dinámica y resolver ejercicios específicos propuestos en la cátedra, ofreciendo una experiencia visual intuitiva gracias al uso de **D3.js** para el renderizado de los autómatas y **SweetAlert2** para la interacción con el usuario.
 
-  -----------------------------------------------------------------------
-  Tecnología                                       Uso
-  ------------------------------------------------ ----------------------
-  **HTML5**                                        Estructura del
-                                                   proyecto y vistas
-                                                   principales.
+## 🚀 Tecnologías Utilizadas
 
-  **CSS3**                                         Diseño visual y
-                                                   estilos de la
-                                                   interfaz.
+El proyecto está construido con estándares modernos de desarrollo web, sin dependencias pesadas de frameworks, asegurando un rendimiento óptimo.
 
-  **JavaScript**                                   Lógica del simulador y
-                                                   manipulación dinámica
-                                                   de estados.
+* ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white) **Estructura semántica**.
+* ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white) **Estilos y diseño responsivo**.
+* ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black) **Lógica de los autómatas**.
+* ![D3.js](https://img.shields.io/badge/D3.js-F9A03C?style=flat&logo=d3.js&logoColor=white) **Visualización de grafos y nodos**.
+* ![SweetAlert2](https://img.shields.io/badge/SweetAlert2-8E44AD?style=flat&logo=popup&logoColor=white) **Alertas modales estéticas**.
+* **Particles.js**: Efectos visuales de fondo.
 
-  **SweetAlert2**                                  Alertas modernas y
-                                                   elegantes.
+## 📂 Estructura del Proyecto
 
-  **D3.js**                                        Graficación de
-                                                   autómatas y
-                                                   transiciones de manera
-                                                   interactiva.
+La organización de directorios sigue una arquitectura modular para facilitar el mantenimiento:
 
-  **Particles.js**                                 Fondo dinámico para
-                                                   mejorar la experiencia
-                                                   visual.
-  -----------------------------------------------------------------------
-
-------------------------------------------------------------------------
-
-## 📂 **Estructura del Proyecto**
-
-    assets/
-    │── css/
-    │   ├── dashboard-automatas.css
-    │   ├── particulas.css
-    │   └── styles.css
-    │
-    │── img/
-    │   ├── logo.webp
-    │   ├── LogoS.png
-    │   └── vs-code.png
-    │
-    │── js/
-    │   ├── config-particulas.js
-    │   ├── dashboard-automatas.js
-    │   ├── ejercicio-1.js
-    │   ├── ejercicio-2.js
-    │   └── particles.min.js
-    │
-    views/
-    │── ejercicio-1.html
-    │── ejercicio-2.html
-    └── index.html
-
+```text
+├── assets/
+│   ├── css/
+│   │   ├── dashboard-automatas.css  # Estilos del panel principal
+│   │   ├── particulas.css           # Estilos para el fondo animado
+│   │   └── styles.css               # Estilos globales
+│   ├── img/                         # Recursos gráficos (Logos, iconos)
+│   └── js/
+│       ├── config-particulas.js     # Configuración de Particles.js
+│       ├── dashboard-automatas.js   # Lógica general del dashboard
+│       ├── ejercicio-1.js           # Lógica específica del Autómata 1
+│       ├── ejercicio-2.js           # Lógica específica del Autómata 2
+│       └── particles.min.js         # Librería de partículas
+├── views/
+│   ├── ejercicio-1.html             # Vista del primer ejercicio
+│   └── ejercicio-2.html             # Vista del segundo ejercicio
+├── index.html                       # Página de aterrizaje (Landing Page)
+└── README.md                        # Documentación
 ------------------------------------------------------------------------
 
 ## 🧠 **Características Principales**
@@ -98,13 +63,13 @@ para fines educativos y de análisis formal.
 
 ## 📘 **Ejercicios Implementados**
 
-### **1️⃣ Ejercicio 1 --- Autómata AFD**
+### **1️⃣ Ejercicio 1 --- Validación de Correo Electrónico**
 
 -   Procesa cadenas deterministas.\
 -   Muestra transición por transición.\
 -   Indica aceptación o rechazo.
 
-### **2️⃣ Ejercicio 2 --- Autómata AFN**
+### **2️⃣ Ejercicio 2 --- Valida números multilos de 3**
 
 -   Manejo de múltiples transiciones posibles.\
 -   Despliegue del recorrido completo.\
