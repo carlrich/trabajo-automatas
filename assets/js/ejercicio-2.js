@@ -9,9 +9,11 @@ function verificarCadena() {
     cadena = 'ε';
   }
 
-  const { aceptada, recorrido } = reconocerCadena(cadena);
+  const { aceptada, recorrido, listaEstados } = reconocerCadena(cadena);
 
   document.getElementById("recorrido-cadena").innerHTML = recorrido.join("") + `<br><strong>Cadena ${ aceptada ? "aceptada" : "rechazada" }:</strong> ${ cadena }`;
+
+  iluminarRecorrido(listaEstados);
 
   if (aceptada) {
     Swal.fire({
@@ -44,11 +46,13 @@ function limpiarCampos() {
   document.getElementById('cadena').value = '';
   document.getElementById('resultado').innerHTML = '';
   document.getElementById('recorrido-cadena').innerHTML = 'Escriba una cadena';
+  limpiarGrafo();
 }
 
 function reconocerCadena(cadena) {
   let estado = "q0";
   const recorrido = [];
+  const listaEstados = ["q0"];
 
   for (let caracter of cadena) {
     let estadoAnterior = estado;
@@ -84,6 +88,8 @@ function reconocerCadena(cadena) {
 
     estado = estadoNuevo;
 
+    listaEstados.push(estadoNuevo);
+
     recorrido.push(`
       <math>
         <mrow>
@@ -103,5 +109,5 @@ function reconocerCadena(cadena) {
 
   const aceptada = estado === "q0";
 
-  return { aceptada, recorrido };
+  return { aceptada, recorrido, listaEstados };
 }
