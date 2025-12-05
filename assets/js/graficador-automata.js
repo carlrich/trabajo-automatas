@@ -15,7 +15,8 @@ function initGraph() {
     .attr("width", "100%")
     .attr("height", "100%")
     .attr("viewBox", `0 0 ${width} ${height}`)
-    .style("background", "white");
+    .style("background", "white")
+    .style("border-radius", "10px");
 
   // Definir flechas
   svg

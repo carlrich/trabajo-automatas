@@ -12,7 +12,7 @@
 body {
   background: #f0f0f0;
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   padding: 20px;
   display: grid;
   grid-template-columns: auto 1fr;
@@ -33,6 +33,7 @@ nav {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   color: #2d3441;
   position: relative;
+  /* height: fit-content; */
   a.atras {
     position: absolute;
     right: 10px;
@@ -148,6 +149,15 @@ nav {
     font-size: 0.9rem;
     color: #6b7280;
   }
+}
+
+main {
+  width: 100%;
+  background: white;
+  border-radius: 10px;
+  flex: 1;
+  overflow: auto;
+  scrollbar-width: thin;
 }
 
 footer {
