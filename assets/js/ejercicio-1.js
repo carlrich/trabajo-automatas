@@ -1,7 +1,7 @@
 document.getElementById('btn-run').addEventListener('click', verificarCadena);
 document.getElementById('btn-clear').addEventListener('click', limpiarCampos);
 
-const verificarCadena = () => {
+function verificarCadena() {
   const cadena = document.getElementById('cadena').value.trim();
   const resultado = document.getElementById('resultado');
 
@@ -47,14 +47,14 @@ const verificarCadena = () => {
   }
 }
 
-const limpiarCampos = () => {
+function limpiarCampos() {
   document.getElementById('cadena').value = '';
   document.getElementById('resultado').innerHTML = '';
   document.getElementById('recorrido-cadena').innerHTML = 'Escriba una cadena';
   limpiarGrafo();
 }
 
-const reconocerCadena = (cadena) => {
+function reconocerCadena(cadena) {
   let estado = "q0";
   const recorrido = [];
   const listaEstados = ["q0"];
