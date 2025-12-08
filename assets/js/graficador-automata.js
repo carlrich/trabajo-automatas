@@ -5,7 +5,7 @@ const width = 800,
   nodeRadius = 13;
 
 // Inicializar el gráfico (Llamar al cargar la página)
-function initGraph() {
+const initGraph = () => {
   const container = d3.select("#graph-container");
   container.html(""); // Limpiar
 
@@ -143,7 +143,7 @@ function initGraph() {
 }
 
 // Auxiliares
-function calculateIntersection(source, target, radius) {
+const calculateIntersection = (source, target, radius) => {
   const dx = target.x - source.x,
     dy = target.y - source.y;
   const dist = Math.sqrt(dx * dx + dy * dy) || 1;
@@ -152,16 +152,19 @@ function calculateIntersection(source, target, radius) {
     y: target.y - (dy / dist) * radius,
   };
 }
-function dragstarted(event, d) {
+
+const dragstarted = (event, d) => {
   if (!event.active) simulation.alphaTarget(0.3).restart();
   d.fx = d.x;
   d.fy = d.y;
 }
-function dragged(event, d) {
+
+const dragged = (event, d) => {
   d.fx = event.x;
   d.fy = event.y;
 }
-function dragended(event, d) {
+
+const dragended = (event, d) => {
   if (!event.active) simulation.alphaTarget(0);
   d.fx = null;
   d.fy = null;
@@ -169,7 +172,7 @@ function dragended(event, d) {
 
 // --- FUNCIÓN DE ANIMACIÓN PÚBLICA ---
 // Recibe una lista de IDs de estados: ["q0", "q1", "q2", ...]
-async function iluminarRecorrido(listaEstados) {
+const iluminarRecorrido = async (listaEstados) => {
   // 1. Resetear estilos previos
   d3.selectAll("circle").attr("stroke", "#333").attr("stroke-width", 2);
   d3.selectAll(".link").attr("stroke", "#999").attr("stroke-width", 2);
@@ -218,7 +221,7 @@ async function iluminarRecorrido(listaEstados) {
 }
 
 // Función para limpiar visualmente
-function limpiarGrafo() {
+const limpiarGrafo = () => {
   d3.selectAll("circle")
     .attr("fill", "white")
     .attr("stroke", "#333")
